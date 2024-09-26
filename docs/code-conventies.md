@@ -2,7 +2,10 @@
 
 ## Code Conventies
 
+Richtlijnen voor consitente, navolgbare en robuste code:
 Do's and Dont's als je code schrijft ... 
+
+
 
 <!--
 HTML (EJS)
