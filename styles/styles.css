@@ -26,11 +26,14 @@
   background-color: var(--beige-background);
   color: #481B02;
   padding: 15px 8em;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
 }
 
 /* logo */
 .nav-geveltuin img {
-  width:4em;
+  width:5em;
 }
 
 /* Menu items */
@@ -42,7 +45,7 @@
 }
 
 .nav-geveltuin ul li {
-  margin-right: 60px;
+  margin-left: 60px;
 }
 
 .nav-geveltuin ul li a {
@@ -72,10 +75,190 @@ img.hamburger-icon {
   display: none;
 }
 
+/* Header Geveltuin */
+.header-geveltuin {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--beige-background);
+  align-self: center;
+  padding: 2em 1em 7em 1em;
+  border-radius: 0px 0px 20px 20px;
+  gap: 3em;
+}
+
+.header-geveltuin section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+img.header-img {
+  width: 100%;
+  height: 25em;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.header-geveltuin h1 {
+  text-align: center;
+}
+
+.header-geveltuin p {
+  text-align: center;
+}
+
+p.sup-titel {
+  text-align: center;
+  margin-bottom: -0.5em;
+}
+
+/* Button header */
+a.btn-header {
+  align-self: center;
+  background-color: var(--orange-button);
+  color: var(--white-main);
+  padding: 0.8em 1.5em;
+  border-radius: 100px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  margin-top: 1.5em;
+  transition: ease-in-out .2s;
+  font-weight: 600;
+}
+
+.btn-header img {
+  align-items: center;
+}
+
+a.btn-header:hover {
+  background-color: var(--brown-text);
+  transition: ease-in-out .2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Media query */
 
+/* Font groottes */
+
+@media screen and (min-width: 150px) {
+    * {
+        font-size: 12px;
+        line-height: 1.7em;
+    }
+}
+
+@media screen and (min-width: 250px) {
+    * {
+        font-size: 14px;
+        line-height: 1.7em;
+    }
+}
+
+@media screen and (min-width: 350px) {
+    * {
+        font-size: 14px;
+        line-height: 1.8em;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    * {
+        font-size: 16px;
+        line-height: 1.8em;
+    }
+}
+
+@media screen and (min-width: 1028px) {
+    * {
+        font-size: 17px;
+    }
+}
+
+/* h1 font-size */
+@media screen and (min-width: 0px) {
+    h1 {
+        font-size: 20px;
+        line-height: 2em;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 250px) {
+    h1 {
+        font-size: 25px;
+        line-height: 2em;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 350px) {
+    h1 {
+        font-size: 35px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    h1 {
+        font-size: 38px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 1028px) {
+    h1 {
+        font-size: 50px;
+        font-weight: bold;
+    }
+}
+
+/* h2 font-size */
+@media screen and (min-width: 250px) {
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 350px) {
+    h2 {
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    h2 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 1028px) {
+    h2 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+}
+
+
 /* navigatie hamburger menu */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
 .nav-geveltuin {
   padding: 15px 1em;
 }
@@ -113,79 +296,87 @@ img.hamburger-icon {
 }
 }
 
-/* Font groottes */
-
-@media screen and (min-width: 200px) {
-    * {
-        font-size: 10px;
-    }
+ @media screen and (min-width: 740px) {
+    .nav-geveltuin {
+    padding: 1em 3em 1em 3em;
+  }
 }
 
-@media screen and (min-width: 250px) {
-    * {
-        font-size: 12px;
-    }
+  @media screen and (min-width: 1000px) {
+    .nav-geveltuin {
+    padding: 1em 6em 1em 6em;
+  }
+}
+  @media screen and (min-width: 1200px) {
+  .nav-geveltuin  {
+    flex-direction: row;
+    padding: 1em 8em 1em 8em;
+  }
 }
 
-@media screen and (min-width: 350px) {
-    * {
-        font-size: 14px;
-    }
+/* Header geveltuin */
+  @media screen and (min-width: 740px) {
+  .header-geveltuin {
+    flex-direction: row;
+    padding: 3em 3em 7em 3em;
+  }
+
+  .header-geveltuin section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  img.header-img {
+    width: 100%;
+    height: 28em;
+    border-radius: 20px;
+  }
+
+  .header-geveltuin h1 {
+    text-align: left;
+  }
+
+  .header-geveltuin p {
+    text-align: left;
+  }
+
+  p.sup-titel {
+    text-align: left;
+    margin-bottom: -0.5em;
+  }
+
+  /* Button header */
+  a.btn-header {
+    align-self: baseline;
+    font-size: 16px;
+  }
 }
 
-@media screen and (min-width: 500px) {
-    * {
-        font-size: 16px;
-    }
+  @media screen and (min-width: 1000px) {
+  .header-geveltuin {
+    flex-direction: row;
+    padding: 3em 6em 7em 6em;
+  }
+
+  img.header-img {
+    width: 100%;
+    height: 28em;
+  }
 }
 
-@media screen and (min-width: 1028px) {
-    * {
-        font-size: 18px;
-    }
+  @media screen and (min-width: 1200px) {
+  .header-geveltuin {
+    flex-direction: row;
+    padding: 2em 8em 8em 8em;
+  }
+
+  img.header-img {
+    width: 100%;
+    height: 24em;
+  }
 }
-
-@media screen and (min-width: 200px) {
-    li {
-        font-size: 5px;
-    }
-}
-
-@media screen and (min-width: 250px) {
-    li {
-        font-size: 6px;
-    }
-}
-
-@media screen and (min-width: 350px) {
-    li {
-        font-size: 12px;
-    }
-}
-
-@media screen and (min-width: 500px) {
-    li {
-        font-size: 14px;
-    }
-}
-
-@media screen and (min-width: 1028px) {
-    li {
-        font-size: 16px;
-    }
-}
-
-@media screen and (min-width: 1028px) {
-    li {
-        font-size: 16px;
-    }
-}
-
-
-
-
-
-
 
 
 
