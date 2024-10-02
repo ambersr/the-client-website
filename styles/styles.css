@@ -18,8 +18,16 @@
 }
 
 h2 {
-  font-size: clamp(1.7em, 5vw, 2.2em);
-  line-height: 2em;
+  font-size: clamp(1.8em, 5vw, 2.2em);
+  /* line-height: 2em; */
+  line-height: clamp(1.2rem, 2.5rem + 0.087vw, 13rem);
+  margin: 0px 0px 10px 0px;
+}
+
+h3 {
+  font-size: clamp(1.1em, 5vw, 1.4em);
+  line-height: clamp(1.2rem, 2rem + 0.087vw, 8rem);
+  margin: 0px 0px 10px 0px;
 }
 
 main {
@@ -45,6 +53,7 @@ main {
   position: sticky;
   top: 0;
   overflow: hidden;
+  z-index: 99;
 }
 
 /* logo */
@@ -158,7 +167,7 @@ img.header-img {
 
 #begin p.sup-titel {
   text-align: center;
-  margin-bottom: -0.5em;
+  margin: 0px 0px 10px 0px;
 }
 
 /* Button header */
@@ -193,10 +202,11 @@ section.begin {
   display: flex;
   flex-direction: column;
   background-color: var(--white-main);
-  padding: 3em 1em 2em 1em;
+  padding: 3em 0em 0em 0em;
   align-self: center;
   width: 92%;
   border-radius: 20px;
+  z-index: 1;
 }
 
 .begin h2 {
@@ -243,7 +253,116 @@ figure.banner-img img {
   height: 50vh;
   border-radius: 20px;
   object-fit: cover;
+  margin-bottom: -10px;
 }
+
+
+
+
+
+/* Hier staat de code van het begin */
+.waarom {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--green-background);
+  align-self: center;
+  padding: 18em 1em 3em 1em;
+  border-radius: 0px 0px 20px 20px;
+  gap: 3em;
+  margin-top: -15em;
+  z-index: 0;
+}
+
+.waarom h2 {
+  color: var(--white-main);
+}
+
+.waarom p {
+  color: var(--white-main);
+}
+
+.header-waarom .sup-titel {
+  margin: 0px 0px 10px 0px;
+}
+
+.header-waarom {
+  display: flex;
+  flex-direction: column;
+}
+
+a.btn-waarom {
+  align-self: baseline;
+  background-color: var(--orange-button);
+  color: var(--white-main);
+  padding: 0.8em 1.5em;
+  border-radius: 100px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  margin-top: 1.5em;
+  transition: ease-in-out .2s;
+  font-weight: 600;
+}
+
+a.btn-waarom:hover {
+  background-color: var(--brown-text);
+  transition: ease-in-out .2s;
+}
+
+/* Hier komt de accordion */
+.accordion-card {
+  background-color: var(--beige-background);
+  padding: 2em;
+  border-radius: 20px;
+}
+
+.accordion {
+  background-color: var(--beige-background);
+  color: var(--brown-text);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+  border-bottom: 1px solid var(--brown-text);
+}
+
+.active,
+.accordion:hover {
+  background-color: var(--beige-background);
+}
+
+.accordion:after {
+  content: '\002B';
+  color: var(--brown-text);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: var(--beige-background);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel p {
+  color: var(--brown-text);
+}
+
+.accordion-card h3 {
+  padding-bottom: 15px;
+}
+
 
 
 
@@ -370,7 +489,7 @@ figure.banner-img img {
 @media screen and (min-width: 740px) {
   section.begin {
     width: 90%;
-    padding: 4em 1em 2em 1em;
+    padding: 4em 0em 0em 0em;
   }
 
   .begin p.sup-titel {
@@ -391,7 +510,7 @@ figure.banner-img img {
 @media screen and (min-width: 1000px) {
   section.begin {
     width: 82%;
-    padding: 4.7em 1em 2em 1em;
+    padding: 4.7em 0em 0em 0em;
   }
 
   figure.banner-img img {
@@ -411,40 +530,37 @@ figure.banner-img img {
 }
 
 
-/* .accordion {
-background-color: #eee;
-color: #444;
-cursor: pointer;
-padding: 18px;
-width: 100%;
-border: none;
-text-align: left;
-outline: none;
-font-size: 15px;
-transition: 0.4s;
+
+
+
+
+
+
+/* Media query voor waarom stuk */
+@media screen and (min-width: 740px) {
+  .waarom {
+  display: flex;
+  flex-direction: row;
+  padding: 20em 3em 7em 3em;
 }
 
-.active, .accordion:hover {
-background-color: #ccc;
+.header-waarom {
+  width: 50%;
 }
 
-.accordion:after {
-content: '\002B';
-color: #777;
-font-weight: bold;
-float: right;
-margin-left: 5px;
+.accordion-card {
+  width: 50%;
+}
 }
 
-.active:after {
-content: "\2212";
+@media screen and (min-width: 1000px) {
+   .waarom {
+    padding: 20em 6em 7em 6em;
+   }
 }
 
-.panel {
-padding: 0 18px;
-background-color: white;
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.2s ease-out;
+@media screen and (min-width: 1200px) {
+  .waarom {
+     padding: 22em 8em 8em 8em;
+  }
 }
- */
