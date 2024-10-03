@@ -30,6 +30,12 @@ h3 {
   margin: 0px 0px 10px 0px;
 }
 
+h4 {
+  font-size: clamp(0.9em, 5vw, 1.2em);
+  line-height: clamp(1.2rem, 2rem + 0.087vw, 8rem);
+  margin: 0px 0px 0px 0px;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -157,7 +163,7 @@ img.header-img {
 
 .header-geveltuin h1 {
   text-align: left;
-  font-size: clamp(2em,5vw,2.5em);
+  font-size: clamp(2em, 5vw, 2.5em);
   line-height: 2em;
 }
 
@@ -369,6 +375,118 @@ a.btn-waarom:hover {
 
 
 
+
+/* Hier begint 'Waarom meedoen' */
+.aanmelden {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-main);
+  padding: 3em 1em 3em 1em;
+  border-radius: 20px;
+  z-index: 1;
+  justify-content: center;
+}
+
+
+.aanmelden p.sup-titel {
+  align-self: center;
+}
+
+.aanmelden h2 {
+  align-self: center;
+  text-align: center;
+  padding: 0em 0em 0.5em 0em;
+}
+
+.aanmeld-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Blok links */
+.left {
+  background-color: var(--beige-background);
+  padding: 2em;
+  border-radius: 15px;
+}
+
+.left .divider {
+  height: 1px;
+  background-color: var(--brown-text);
+  margin: 1.5em 0em 1.5em 0em;
+}
+
+.left input {
+  background-color: #F2DEAB;
+  border: none;
+  border-radius: 50px;
+  padding: .8em 1em;
+  width: 100%;
+  color: #B39C8F;
+}
+
+input#form-button {
+  width: fit-content;
+  background-color: var(--orange-button);
+  color: var(--white-main);
+  padding: 0.8em 3em;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: ease-in-out .2s;
+  font-weight: 600;
+}
+
+
+
+/* Blok rechts */
+.right {
+  background-color: var(--green-background);
+  padding: 0.5em;
+  border-radius: 15px;
+}
+
+img.info-img {
+  width: 100%;
+  height: 18em;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.right h4 {
+  color: var(--beige-background);
+  padding: 1em 1em 1em 1em;
+}
+
+.right p {
+  color: var(--beige-background);
+  padding: 0em 1em 1em 1em;
+}
+
+.right ul {
+  list-style-type: none;
+  padding: 0em 1em 1em 1em;
+}
+
+.right li a {
+  color: var(--beige-background);
+  gap: 10px;
+  display: flex;
+}
+
+.right li {
+  color: var(--beige-background);
+  gap: 10px;
+  display: flex;
+}
+
+
+
+
+
+
+
+
 /* Media query's */
 
 /* Navigatie balk */
@@ -539,28 +657,106 @@ a.btn-waarom:hover {
 /* Media query voor waarom stuk */
 @media screen and (min-width: 740px) {
   .waarom {
-  display: flex;
-  flex-direction: row;
-  padding: 20em 3em 7em 3em;
-}
+    display: flex;
+    flex-direction: row;
+    padding: 20em 3em 7em 3em;
+  }
 
-.header-waarom {
-  width: 50%;
-}
+  .header-waarom {
+    width: 50%;
+  }
 
-.accordion-card {
-  width: 50%;
-}
+  .accordion-card {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 1000px) {
-   .waarom {
+  .waarom {
     padding: 20em 6em 7em 6em;
-   }
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .waarom {
-     padding: 22em 8em 8em 8em;
+    padding: 22em 8em 8em 8em;
+  }
+}
+
+
+
+
+
+
+
+
+/* Media query voor aanmelden */
+@media screen and (min-width: 740px) {
+  .aanmelden {
+    padding: 4em 3em 7em 3em;
+  }
+
+  .aanmelden h2 {
+    padding: 0.7em 0em 0.8em 0em;
+    width: 80%;
+  }
+
+  .aanmeld-info {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .right h4 {
+    padding: 1em 1em 0.7em 0.7em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .aanmelden {
+    padding: 5em 6em 7em 6em;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .left {
+    width: 65%;
+  }
+
+  .right {
+    width: 35%;
+  }
+
+  img.info-img {
+    width: 100%;
+    height: 15em;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .aanmelden {
+    padding: 5em 8em 8em 8em;
+  }
+
+  .aanmelden h2 {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+  }
+
+  .aanmelden h2 {
+    width: 50%;
   }
 }
