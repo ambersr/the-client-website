@@ -340,6 +340,7 @@ a.btn-waarom:hover {
   background-color: var(--beige-background);
 }
 
+/* Dit is de + icon als je de accordion sluit */
 .accordion:after {
   content: '\002B';
   color: var(--brown-text);
@@ -348,6 +349,7 @@ a.btn-waarom:hover {
   margin-left: 5px;
 }
 
+/* Dit is de - icon als je de accordion opent */
 .active:after {
   content: "\2212";
 }
