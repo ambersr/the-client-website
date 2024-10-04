@@ -13,8 +13,8 @@
   color: var(--brown-text);
   margin: 0;
   font-family: 'Poppins';
-  font-size: clamp(1rem, 0.981rem + 0.087vw, 1.0625rem);
-  line-height: 1.7rem;
+  font-size: clamp(1rem, 0.9905rem + 0.0435vw, 1.03125rem);
+  line-height: 1.8rem;
 }
 
 h2 {
@@ -130,6 +130,7 @@ img.hamburger-icon {
 .nav-geveltuin ul li a:hover {
   color: var(--orange-button);
 }
+
 
 
 
@@ -329,7 +330,7 @@ a.btn-waarom:hover {
   background-color: var(--beige-background);
   color: var(--brown-text);
   cursor: pointer;
-  padding: 18px;
+  padding: 18px 18px 18px 0px;
   width: 100%;
   border: none;
   text-align: left;
@@ -484,6 +485,48 @@ img.info-img {
   gap: 10px;
   display: flex;
 }
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #F2DEAB;
+  padding: 3em 1em 3em 1em;
+  gap: 30px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+footer figure {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0em 1em 0em 0em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-items li a {
+  text-decoration: none;
+}
+
+.menu-items li a:hover {
+  color: var(--orange-button);
+}
+
+
+
 
 
 
@@ -684,7 +727,7 @@ img.info-img {
 
 @media screen and (min-width: 1200px) {
   .waarom {
-    padding: 22em 8em 8em 8em;
+    padding: 22em 8em 6em 8em;
   }
 }
 
@@ -746,11 +789,11 @@ img.info-img {
 
 @media screen and (min-width: 1200px) {
   .aanmelden {
-    padding: 5em 8em 8em 8em;
+    padding: 5em 8em 6em 8em;
   }
 
   .aanmelden h2 {
-    width: 65%;
+    width: 60%;
   }
 }
 
@@ -765,3 +808,58 @@ img.info-img {
     width: 50%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+@media screen and (min-width: 740px) {
+
+  footer {
+    flex-direction: row;
+    padding: 4em 3em 7em 3em;
+    justify-content: space-between;
+
+  }
+
+  footer figure {
+    width: 33.3%;
+  }
+
+  .menu {
+    width: 15%;
+  }
+
+  .samenwerken {
+    width: 33.3%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+   footer {
+     flex-direction: row;
+     padding: 5em 6em 5em 6em;
+     justify-content: space-between;
+
+   }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+      padding: 5em 8em 5em 8em;
+      ;
+  }
+}
+
+
+
+
+
