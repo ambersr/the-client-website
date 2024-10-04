@@ -124,7 +124,6 @@ img.hamburger-icon {
   color: var(--brown-text);
   text-decoration: none;
   transition: color 0.3s;
-  font-family: 'Open Sans';
   font-size: 1em;
 }
 
