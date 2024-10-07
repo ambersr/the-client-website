@@ -15,9 +15,6 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-
-
-
 // Code voor openklappen hamburger menu in nav
 
 const menuButton = document.querySelector("#menuButton");
@@ -28,3 +25,25 @@ menuButton.addEventListener("click", toggleMenu);
 function toggleMenu() {
     hetMenu.classList.toggle("open");
 }
+
+
+
+
+
+
+
+let lastScrollTop = 0;
+const header = document.querySelector('.nav-geveltuin');
+
+window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop) {
+        // Scrollen naar beneden - verberg de header
+        header.style.top = '-95px';  // Pas de waarde aan afhankelijk van de hoogte van de header
+    } else {
+        // Scrollen naar boven - toon de header
+        header.style.top = '0';
+    }
+    lastScrollTop = scrollTop;
+});

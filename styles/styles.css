@@ -43,12 +43,6 @@ main {
 }
 
 
-
-
-
-
-
-
 /* Hier staat de navigatie menu Geveltuin */
 .nav-geveltuin {
   display: flex;
@@ -57,8 +51,9 @@ main {
   background-color: var(--beige-background);
   color: #481B02;
   padding: 15px 1em;
-  position: sticky;
-  top: 0;
+  transition: top 0.3s;
+  position: fixed;
+  width: 100%;
   overflow: hidden;
   z-index: 99;
 
@@ -167,22 +162,22 @@ img.hamburger-icon {
   flex-direction: column;
   background-color: var(--beige-background);
   align-self: center;
-  padding: 2em 1em 7em 1em;
+  padding: 8em 1em 7em 1em;
   border-radius: 0px 0px 20px 20px;
   gap: 3em;
   margin-bottom: -4em;
 
   @media screen and (min-width: 740px) {
     flex-direction: row;
-    padding: 3em 3em 7em 3em;
+    padding: 8em 3em 7em 3em;
   }
 
   @media screen and (min-width: 1000px) {
-    padding: 3em 6em 7em 6em;
+    padding: 8em 6em 7em 6em;
   }
 
   @media screen and (min-width: 1200px) {
-    padding: 2em 8em 8em 8em;
+    padding: 8em 8em 8em 8em;
   }
 }
 
@@ -294,6 +289,7 @@ section.begin {
   width: 92%;
   border-radius: 20px;
   z-index: 1;
+  overflow: hidden;
 
   @media screen and (min-width: 740px) {
     width: 90%;
@@ -314,6 +310,7 @@ section.begin {
   width: 100%;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 
   @media screen and (min-width: 740px) {
     align-self: center;
@@ -390,6 +387,33 @@ figure.banner-img img {
   }
 }
 
+/* Blad links */
+img.leave-left {
+  position: absolute;
+  left: 10%;
+  transform: translate(-55%, 0);
+  width: 55%;
+  z-index: 0;
+
+   @media screen and (min-width: 740px) {
+     width: 30%;
+   }
+
+   @media screen and (min-width: 1200px) {
+     width: 25%;
+   }
+}
+
+/* Blad rechts */
+/* img.leave-right { */
+  /* position: absolute;
+  right: 0;
+  transform: translate(0, 0);
+  width: 55%;
+  z-index: 0; */
+  /* transform: translate(100%, -40%);
+  width: 55%;
+  margin-bottom: -18em; */
 
 
 
