@@ -190,9 +190,29 @@ img.hamburger-icon {
   width: 100%;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 
   @media screen and (min-width: 740px) {
     justify-content: center;
+  }
+}
+
+/* oranje blad */
+
+img.leave-orange {
+  position: absolute;
+  z-index: 0;
+  top: 50;
+  left: 0;
+  width: 50%;
+
+  @media screen and (min-width: 740px) {
+    width: 35%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: 3em;
+    width: 30%;
   }
 }
 
@@ -223,11 +243,6 @@ img.header-img {
   @media screen and (min-width: 740px) {
     text-align: left;
   }
-}
-
-#begin p.sup-titel {
-  text-align: center;
-  margin: 0px 0px 10px 0px;
 }
 
 /* Button header */
@@ -295,36 +310,42 @@ section.begin {
   }
 }
 
-.begin h2 {
-  text-align: center;
-}
-
-.begin p {
-  text-align: center;
+.begin-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
   @media screen and (min-width: 740px) {
     align-self: center;
-    width: 80%;
-  }
-
-  @media screen and (min-width: 1000px) {
-    align-self: center;
     width: 70%;
   }
+}
+
+.begin h2 {
+  text-align: left;
+  padding: 0em 1em 0em 1em;
+  
+  @media screen and (min-width: 740px) {
+     margin-bottom: 0.5em;
+   }
+}
+
+.begin p {
+  text-align: left;
+  padding: 0em 2em 0em 2em;
 }
 
 .begin p.sup-titel {
   text-align: left;
 
   @media screen and (min-width: 740px) {
-      text-align: center;
       margin-bottom: 0.4em;
   }
 }
 
 /* Button hoe het begon */
 a.btn-begin {
-  align-self: center;
+  align-self: baseline;
   background-color: var(--orange-button);
   color: var(--white-main);
   padding: 0.8em 1.5em;
@@ -333,12 +354,14 @@ a.btn-begin {
   display: flex;
   flex-direction: row;
   gap: 0.5em;
-  margin-top: 1.5em;
-  margin-bottom: 3em;
   transition: ease-in-out .2s;
   font-weight: 600;
   align-items: center;
+  margin: 1.5em 2em 3em 2em;
 
+  @media screen and (min-width: 740px) {
+   margin-bottom: 5em;
+  }
 }
 
 .btn-begin img {
