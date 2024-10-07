@@ -19,7 +19,6 @@
 
 h2 {
   font-size: clamp(1.8em, 5vw, 2.2em);
-  /* line-height: 2em; */
   line-height: clamp(1.2rem, 2.5rem + 0.087vw, 13rem);
   margin: 0px 0px 10px 0px;
 }
@@ -48,6 +47,8 @@ main {
 
 
 
+
+
 /* Hier staat de navigatie menu Geveltuin */
 .nav-geveltuin {
   display: flex;
@@ -60,6 +61,18 @@ main {
   top: 0;
   overflow: hidden;
   z-index: 99;
+
+  @media (width > 820px) {
+    padding: 10px 3em;
+  }
+
+  @media (width > 1000px) {
+      padding: 10px 6.5em;
+  }
+
+  @media (width > 1200px) {
+      padding: 10px 8em;
+    }
 }
 
 /* logo */
@@ -76,6 +89,10 @@ main {
   display: block;
   position: absolute;
   right: 15px;
+
+  @media (width > 820px) {
+    display: none;
+  }
 }
 
 img.hamburger-icon {
@@ -89,27 +106,31 @@ img.hamburger-icon {
 
 /* Menu items */
 .nav-geveltuin ul {
-
   list-style-type: none;
   padding: 0;
   margin: 0;
-
   position: fixed;
   top: 70px;
   right: 0%;
   translate: 100%;
-
   background-color: var(--beige-background);
   width: 100%;
   height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
-
   transition: all 0.3s;
+
+  @media (width > 820px) {
+    position: static;
+    width: unset; 
+    height: unset; 
+    translate: 0;
+    flex-direction: row;
+    gap: 60px;
+  }
 }
 
 .nav-geveltuin ul.open {
@@ -136,6 +157,10 @@ img.hamburger-icon {
 
 
 
+
+
+
+
 /* Header Geveltuin */
 .header-geveltuin {
   display: flex;
@@ -146,12 +171,29 @@ img.hamburger-icon {
   border-radius: 0px 0px 20px 20px;
   gap: 3em;
   margin-bottom: -4em;
+
+  @media screen and (min-width: 740px) {
+    flex-direction: row;
+    padding: 3em 3em 7em 3em;
+  }
+
+  @media screen and (min-width: 1000px) {
+    padding: 3em 6em 7em 6em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 2em 8em 8em 8em;
+  }
 }
 
 .header-geveltuin section {
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: 740px) {
+    justify-content: center;
+  }
 }
 
 img.header-img {
@@ -159,6 +201,14 @@ img.header-img {
   height: 25em;
   border-radius: 20px;
   object-fit: cover;
+
+  @media screen and (min-width: 740px) {
+    height: 28em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 24em;
+  }
 }
 
 .header-geveltuin h1 {
@@ -169,6 +219,10 @@ img.header-img {
 
 .header-geveltuin p {
   text-align: left;
+
+  @media screen and (min-width: 740px) {
+    text-align: left;
+  }
 }
 
 #begin p.sup-titel {
@@ -177,7 +231,6 @@ img.header-img {
 }
 
 /* Button header */
-/* raar om een a een class button te geven */
 a.btn-header {
   align-self: baseline;
   background-color: var(--orange-button);
@@ -192,6 +245,11 @@ a.btn-header {
   transition: ease-in-out .2s;
   font-weight: 600;
   align-items: center;
+
+  @media screen and (min-width: 740px) {
+    align-self: baseline;
+    font-size: 16px;
+  }
 }
 
 .btn-header img {
@@ -204,6 +262,13 @@ a.btn-header:hover {
 }
 
 
+
+
+
+
+
+
+
 /* Blok met hoe het begon */
 section.begin {
   display: flex;
@@ -214,6 +279,20 @@ section.begin {
   width: 92%;
   border-radius: 20px;
   z-index: 1;
+
+  @media screen and (min-width: 740px) {
+    width: 90%;
+    padding: 4em 0em 0em 0em;
+  }
+
+@media screen and (min-width: 1000px) {
+    width: 82%;
+    padding: 4.7em 0em 0em 0em;
+  }
+
+@media screen and (min-width: 1200px) {
+    width: 81%;
+  }
 }
 
 .begin h2 {
@@ -222,10 +301,25 @@ section.begin {
 
 .begin p {
   text-align: center;
+
+  @media screen and (min-width: 740px) {
+    align-self: center;
+    width: 80%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    align-self: center;
+    width: 70%;
+  }
 }
 
-p.sup-titel {
+.begin p.sup-titel {
   text-align: left;
+
+  @media screen and (min-width: 740px) {
+      text-align: center;
+      margin-bottom: 0.4em;
+  }
 }
 
 /* Button hoe het begon */
@@ -263,13 +357,25 @@ figure.banner-img img {
   border-radius: 20px;
   object-fit: cover;
   margin-bottom: -10px;
+
+  @media screen and (min-width: 740px) {
+    height: 40vh;
+  }
+
+  @media screen and (min-width: 1000px) {
+    height: 45vh;
+  }
 }
 
 
 
 
 
-/* Hier staat de code van het begin */
+
+
+
+
+/* Hier staat de code van het 'waarom' */
 .waarom {
   display: flex;
   flex-direction: column;
@@ -280,6 +386,19 @@ figure.banner-img img {
   gap: 3em;
   margin-top: -15em;
   z-index: 0;
+
+  @media screen and (min-width: 740px) {
+    flex-direction: row;
+    padding: 20em 3em 7em 3em;
+  }
+
+  @media screen and (min-width: 1000px) {
+    padding: 20em 6em 7em 6em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 22em 8em 6em 8em;
+  }
 }
 
 .waarom h2 {
@@ -297,6 +416,10 @@ figure.banner-img img {
 .header-waarom {
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: 740px) {
+    width: 50%;
+  }
 }
 
 a.btn-waarom {
@@ -324,6 +447,10 @@ a.btn-waarom:hover {
   background-color: var(--beige-background);
   padding: 2em;
   border-radius: 20px;
+
+  @media screen and (min-width: 740px) {
+    width: 50%;
+  }
 }
 
 .accordion {
@@ -381,6 +508,9 @@ a.btn-waarom:hover {
 
 
 
+
+
+
 /* Hier begint 'Waarom meedoen' */
 .aanmelden {
   display: flex;
@@ -390,6 +520,18 @@ a.btn-waarom:hover {
   border-radius: 20px;
   z-index: 1;
   justify-content: center;
+
+  @media screen and (min-width: 740px) {
+    padding: 4em 3em 7em 3em;
+  }
+
+  @media screen and (min-width: 1000px) {
+    padding: 5em 6em 7em 6em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 5em 8em 6em 8em;
+  }
 }
 
 
@@ -401,12 +543,31 @@ a.btn-waarom:hover {
   align-self: center;
   text-align: center;
   padding: 0em 0em 0.5em 0em;
+
+  @media screen and (min-width: 740px) {
+    padding: 0.7em 0em 0.8em 0em;
+    width: 80%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 60%;
+  }
+
+  @media screen and (min-width: 1600px) {
+    width: 50%;
+  }
 }
 
 .aanmeld-info {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media screen and (min-width: 740px) {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
 }
 
 /* Blok links */
@@ -414,6 +575,10 @@ a.btn-waarom:hover {
   background-color: var(--beige-background);
   padding: 2em;
   border-radius: 15px;
+
+  @media screen and (min-width: 1000px) {
+    width: 65%;
+  }
 }
 
 .left .divider {
@@ -443,13 +608,31 @@ input#form-button {
   align-items: center;
 }
 
+@media screen and (min-width: 1000px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+}
 
+@media screen and (min-width: 1600px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+  }
+}
 
 /* Blok rechts */
 .right {
   background-color: var(--green-background);
   padding: 0.5em;
   border-radius: 15px;
+
+  @media screen and (min-width: 1000px) {
+    width: 35%;
+  }
 }
 
 img.info-img {
@@ -457,11 +640,22 @@ img.info-img {
   height: 18em;
   border-radius: 15px;
   object-fit: cover;
+
+  @media screen and (min-width: 1000px) {
+    width: 100%;
+    height: 15em;
+    border-radius: 15px;
+    object-fit: cover;
+  }
 }
 
 .right h4 {
   color: var(--beige-background);
   padding: 1em 1em 1em 1em;
+
+  @media screen and (min-width: 740px) {
+    padding: 1em 1em 0.7em 0.7em;
+  }
 }
 
 .right p {
@@ -493,6 +687,7 @@ img.info-img {
 
 
 
+
 /* Footer */
 footer {
   display: flex;
@@ -501,12 +696,33 @@ footer {
   padding: 3em 1em 3em 1em;
   gap: 30px;
   border-radius: 20px 20px 0px 0px;
+
+  @media screen and (min-width: 740px) {
+    flex-direction: row;
+    padding: 4em 3em 7em 3em;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1000px) {
+    flex-direction: row;
+    padding: 5em 6em 5em 6em;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 5em 8em 5em 8em;
+    ;
+  }
 }
 
 footer figure {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media screen and (min-width: 740px) {
+    width: 33.3%;
+  }
 }
 
 .menu ul {
@@ -525,341 +741,14 @@ footer figure {
   color: var(--orange-button);
 }
 
-
-
-
-
-
-
-
-
-
-
-/* Media query's */
-
-/* Navigatie balk */
-@media (width > 820px) {
-
-  .nav-geveltuin {
-    padding: 10px 3em;
-  }
-
-  .nav-geveltuin ul {
-    position: static;
-    width: unset;
-    height: unset;
-    translate: 0;
-
-    flex-direction: row;
-
-    gap: 60px;
-  }
-
-  .checkbtn {
-    display: none;
-  }
-}
-
-@media (width > 1000px) {
-
-  .nav-geveltuin {
-    padding: 10px 6.5em;
-  }
-}
-
-@media (width > 1200px) {
-
-  .nav-geveltuin {
-    padding: 10px 8em;
-  }
-}
-
-
-
-
-
-
-
-
-/* Header geveltuin */
 @media screen and (min-width: 740px) {
-  .header-geveltuin {
-    flex-direction: row;
-    padding: 3em 3em 7em 3em;
-  }
-
-  .header-geveltuin section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  img.header-img {
-    width: 100%;
-    height: 28em;
-    border-radius: 20px;
-  }
-
-  .header-geveltuin h1 {
-    text-align: left;
-  }
-
-  .header-geveltuin p {
-    text-align: left;
-  }
-
-  p.sup-titel {
-    text-align: left;
-    margin-bottom: -0.5em;
-  }
-
-  /* Button header */
-  a.btn-header {
-    align-self: baseline;
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .header-geveltuin {
-    flex-direction: row;
-    padding: 3em 6em 7em 6em;
-  }
-
-  img.header-img {
-    width: 100%;
-    height: 28em;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header-geveltuin {
-    flex-direction: row;
-    padding: 2em 8em 8em 8em;
-  }
-
-  img.header-img {
-    width: 100%;
-    height: 24em;
-  }
-}
-
-
-
-
-
-
-/* Hoe het begon */
-
-@media screen and (min-width: 740px) {
-  section.begin {
-    width: 90%;
-    padding: 4em 0em 0em 0em;
-  }
-
-  .begin p.sup-titel {
-    text-align: center;
-    margin-bottom: 0.4em;
-  }
-
-  .begin p {
-    align-self: center;
-    width: 80%;
-  }
-
-  Banner afbeelding in hoe het begon figure.banner-img img {
-    height: 40vh;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  section.begin {
-    width: 82%;
-    padding: 4.7em 0em 0em 0em;
-  }
-
-  figure.banner-img img {
-    height: 45vh;
-  }
-
-  .begin p {
-    align-self: center;
-    width: 70%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  section.begin {
-    width: 81%;
-  }
-}
-
-
-
-
-
-
-
-
-/* Media query voor waarom stuk */
-@media screen and (min-width: 740px) {
-  .waarom {
-    display: flex;
-    flex-direction: row;
-    padding: 20em 3em 7em 3em;
-  }
-
-  .header-waarom {
-    width: 50%;
-  }
-
-  .accordion-card {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .waarom {
-    padding: 20em 6em 7em 6em;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .waarom {
-    padding: 22em 8em 6em 8em;
-  }
-}
-
-
-
-
-
-
-
-
-/* Media query voor aanmelden */
-@media screen and (min-width: 740px) {
-  .aanmelden {
-    padding: 4em 3em 7em 3em;
-  }
-
-  .aanmelden h2 {
-    padding: 0.7em 0em 0.8em 0em;
-    width: 80%;
-  }
-
-  .aanmeld-info {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-  }
-
-  .right h4 {
-    padding: 1em 1em 0.7em 0.7em;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .aanmelden {
-    padding: 5em 6em 7em 6em;
-  }
-
-  form {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-  }
-
-  .left {
-    width: 65%;
-  }
-
-  .right {
-    width: 35%;
-  }
-
-  img.info-img {
-    width: 100%;
-    height: 15em;
-    border-radius: 15px;
-    object-fit: cover;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .aanmelden {
-    padding: 5em 8em 6em 8em;
-  }
-
-  .aanmelden h2 {
-    width: 60%;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  form {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 15px;
-  }
-
-  .aanmelden h2 {
-    width: 50%;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* footer */
-@media screen and (min-width: 740px) {
-
-  footer {
-    flex-direction: row;
-    padding: 4em 3em 7em 3em;
-    justify-content: space-between;
-
-  }
-
-  footer figure {
-    width: 33.3%;
-  }
-
   .menu {
     width: 15%;
   }
+}
 
+@media screen and (min-width: 740px) {
   .samenwerken {
     width: 33.3%;
   }
 }
-
-@media screen and (min-width: 1000px) {
-   footer {
-     flex-direction: row;
-     padding: 5em 6em 5em 6em;
-     justify-content: space-between;
-
-   }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer {
-      padding: 5em 8em 5em 8em;
-      ;
-  }
-}
-
-
-
-
-
