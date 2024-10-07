@@ -36,15 +36,13 @@ const header = document.querySelector('.nav-geveltuin');
 window.addEventListener('scroll', () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
-    if (scrollTop === 0) {
-        // Als de gebruiker helemaal bovenaan is, zorg dat de header zichtbaar is
-        header.style.top = '0';
-    } else if (scrollTop > lastScrollTop) {
-        // Scrollen naar beneden - verberg de header
-        header.style.top = '-95px';  // Pas de waarde aan afhankelijk van de hoogte van de header
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+        // Als je naar beneden scrolt en niet helemaal bovenaan bent
+        header.style.top = '-80px';  // Pas de waarde aan afhankelijk van de hoogte van de header
     } else {
-        // Scrollen naar boven - toon de header
+        // Als je naar boven scrolt of bovenaan de pagina bent
         header.style.top = '0';
     }
+    
     lastScrollTop = scrollTop;
 });
