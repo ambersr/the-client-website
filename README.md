@@ -1,10 +1,10 @@
-# The Client - Website
+# Platform Bieb in Bloei
 
-Ontwerp en maak een website voor een opdrachtgever en bespreek het resultaat tijdens de Sprint Review.
+In sprint 1 hebben we de opdracht gekregen om voor een opdrachtgever een website te ontwikkelen in HTML, CSS en JavaScript. Samen met een team werk ik aan de Bieb in Bloei website. De pagina's zijn onderling verdeeld, ik heb de opdracht gekregen om de Geveltuinpagina te ontwerpen en ontwikkelen. 
 
-De instructie van deze leertaak staan in de [INSTRUCTIONS](https://github.com/fdnd-task/the-client-website/blob/main/docs/INSTRUCTIONS.md)
+De vraag van de opdrachtgever: Ontwerp en ontwikkel het digitale platform voor Bieb in Bloei van Buurtcampus Oost. Met als doel Harry op een creatieve manier naar voren te laten komen.
 
-
+Linkje naar de Geveltuin pagina: www.ambersr.github.io/the-client-website/
 
 ## Inhoudsopgave Readme
 
