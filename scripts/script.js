@@ -28,7 +28,7 @@ function toggleMenu() {
 
 
 // Navigatie balk hide when scroll
-document.addEventListener('DOMContentLoaded', () => {
+ocument.addEventListener('DOMContentLoaded', () => {
     let lastScrollTop = 0;
     const header = document.querySelector('.nav-geveltuin');
     const menuButton = document.getElementById('menuButton');
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!menu.classList.contains('open')) {
                 if (scrollTop > lastScrollTop && scrollTop > 100) {
                     // Scrollen naar beneden - verberg de header
-                    header.style.top = '-95px';  // Pas de waarde aan afhankelijk van de hoogte van de header
+                    header.style.top = '-80px';  // Pas de waarde aan afhankelijk van de hoogte van de header
                 } else {
                     // Scrollen naar boven of bij de bovenkant - toon de header
                     header.style.top = '0';
