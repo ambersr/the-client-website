@@ -273,7 +273,7 @@ a.btn-header {
   align-self: baseline;
   background-color: var(--orange-button);
   color: var(--white-main);
-   padding: 0.6em 1.3em;
+  padding: 0.6em 1.3em;
   border-radius: 100px;
   text-decoration: none;
   display: flex;
@@ -364,9 +364,9 @@ a.btn-header:hover {
 
 /* .harry-header:hover {
   transform: scale(1.1); */
-  /* Slightly enlarge the mascot when hovered */
-  /* cursor: pointer; */
-  /* Change the cursor to pointer to make it interactive */
+/* Slightly enlarge the mascot when hovered */
+/* cursor: pointer; */
+/* Change the cursor to pointer to make it interactive */
 
 
 /* .harry-header {
@@ -467,7 +467,7 @@ a.btn-begin {
   align-self: baseline;
   background-color: var(--orange-button);
   color: var(--white-main);
-     padding: 0.6em 1.3em;
+  padding: 0.6em 1.3em;
   border-radius: 100px;
   text-decoration: none;
   display: flex;
@@ -551,14 +551,14 @@ img.leave-right {
   }
 
   @media screen and (min-width: 1000px) {
-     width: 330px;
+    width: 330px;
     position: absolute;
     right: 0;
     margin-top: 100px;
   }
 
   @media screen and (min-width: 1200px) {
-     width: 350px;
+    width: 350px;
     position: absolute;
     right: 0;
     margin-top: 50px;
@@ -623,7 +623,7 @@ a.btn-waarom {
   align-self: baseline;
   background-color: var(--orange-button);
   color: var(--white-main);
-     padding: 0.6em 1.3em;
+  padding: 0.6em 1.3em;
   border-radius: 100px;
   text-decoration: none;
   display: flex;
@@ -895,7 +895,7 @@ input#form-button:hover {
   background-color: var(--green-background);
   padding: 0.5em;
   border-radius: 15px;
-   z-index: 1;
+  z-index: 1;
 
   @media screen and (min-width: 1000px) {
     width: 35%;
