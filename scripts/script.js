@@ -58,5 +58,6 @@ ocument.addEventListener('DOMContentLoaded', () => {
 
             lastScrollTop = scrollTop;
         });
-    }
+}
+
 });

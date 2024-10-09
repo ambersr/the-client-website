@@ -15,7 +15,7 @@
   font-family: 'Poppins';
   font-size: clamp(1rem, 0.9905rem + 0.0435vw, 1.03125rem);
   line-height: 1.8rem;
-   scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 h2 {
@@ -71,12 +71,18 @@ main {
   }
 
   @media (width > 1000px) {
-      padding: 10px 6.5em;
+    padding: 10px 6.5em;
   }
 
   @media (width > 1200px) {
-      padding: 10px 8em;
-    }
+    padding: 10px 8em;
+  }
+}
+
+.items-button {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 
 /* logo */
@@ -134,8 +140,8 @@ img.hamburger-icon {
 
   @media (width > 820px) {
     position: static;
-    width: unset; 
-    height: unset; 
+    width: unset;
+    height: unset;
     translate: 0;
     flex-direction: row;
     gap: 60px;
@@ -150,7 +156,7 @@ img.hamburger-icon {
 
 .nav-geveltuin ul li {
   margin: 10px 0;
-  
+
 }
 
 .nav-geveltuin ul li a {
@@ -165,11 +171,9 @@ img.hamburger-icon {
 }
 
 a.actief {
-  color: var(--orange-button)!important;
+  color: var(--orange-button) !important;
 
 }
-
-
 
 
 
@@ -218,17 +222,20 @@ a.actief {
 img.leave-orange {
   position: absolute;
   z-index: 0;
-  top: 50;
-  left: 0;
-  width: 50%;
+  top: -30px;
+  left: -230px;
+  width: 500px;
 
   @media screen and (min-width: 740px) {
-    width: 35%;
+    top: -30px;
+    left: -200px;
+    width: 550px;
   }
 
   @media screen and (min-width: 1200px) {
-    top: 3em;
-    width: 30%;
+    top: -70px;
+    left: -230px;
+    width: 650px;
   }
 }
 
@@ -266,7 +273,7 @@ a.btn-header {
   align-self: baseline;
   background-color: var(--orange-button);
   color: var(--white-main);
-  padding: 0.8em 1.5em;
+   padding: 0.6em 1.3em;
   border-radius: 100px;
   text-decoration: none;
   display: flex;
@@ -309,7 +316,7 @@ section.begin {
   align-self: center;
   width: 92%;
   border-radius: 20px;
-  z-index: 1;
+  z-index: 4;
   overflow: hidden;
 
   @media screen and (min-width: 740px) {
@@ -317,12 +324,12 @@ section.begin {
     padding: 4em 0em 0em 0em;
   }
 
-@media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1000px) {
     width: 82%;
     padding: 4.7em 0em 0em 0em;
   }
 
-@media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     width: 81%;
   }
 }
@@ -342,10 +349,10 @@ section.begin {
 .begin h2 {
   text-align: left;
   padding: 0em 1em 0em 1em;
-  
+
   @media screen and (min-width: 740px) {
-     margin-bottom: 0.5em;
-   }
+    margin-bottom: 0.5em;
+  }
 }
 
 .begin p {
@@ -357,7 +364,7 @@ section.begin {
   text-align: left;
 
   @media screen and (min-width: 740px) {
-      margin-bottom: 0.4em;
+    margin-bottom: 0.4em;
   }
 }
 
@@ -366,7 +373,7 @@ a.btn-begin {
   align-self: baseline;
   background-color: var(--orange-button);
   color: var(--white-main);
-  padding: 0.8em 1.5em;
+     padding: 0.6em 1.3em;
   border-radius: 100px;
   text-decoration: none;
   display: flex;
@@ -376,9 +383,10 @@ a.btn-begin {
   font-weight: 600;
   align-items: center;
   margin: 1.5em 2em 3em 2em;
+  font-size: 16px;
 
   @media screen and (min-width: 740px) {
-   margin-bottom: 5em;
+    margin-bottom: 5em;
   }
 }
 
@@ -391,6 +399,10 @@ a.btn-begin:hover {
   transition: ease-in-out .2s;
 }
 
+figure.banner-img {
+  z-index: 3;
+}
+
 /* Banner afbeelding in hoe het begon */
 figure.banner-img img {
   width: 100%;
@@ -398,6 +410,7 @@ figure.banner-img img {
   border-radius: 20px;
   object-fit: cover;
   margin-bottom: -10px;
+  z-index: 1;
 
   @media screen and (min-width: 740px) {
     height: 40vh;
@@ -412,30 +425,51 @@ figure.banner-img img {
 img.leave-left {
   position: absolute;
   left: 10%;
-  transform: translate(-55%, 0);
-  width: 55%;
+  transform: translate(-45%, 0);
+  width: 230px;
   z-index: 0;
 
-   @media screen and (min-width: 740px) {
-     width: 30%;
-   }
+  @media screen and (min-width: 740px) {
+    width: 30%;
+  }
 
-   @media screen and (min-width: 1200px) {
-     width: 25%;
-   }
+  @media screen and (min-width: 1200px) {
+    width: 25%;
+  }
 }
 
 /* Blad rechts */
-/* img.leave-right { */
-  /* position: absolute;
+img.leave-right {
+  position: absolute;
   right: 0;
-  transform: translate(0, 0);
-  width: 55%;
-  z-index: 0; */
-  /* transform: translate(100%, -40%);
-  width: 55%;
-  margin-bottom: -18em; */
+  width: 200px;
+  margin-top: 300px;
+  z-index: 0;
+  display: none;
 
+  @media screen and (min-width: 740px) {
+    display: block;
+    width: 230px;
+    position: absolute;
+    right: 0;
+    margin-top: 100px;
+    translate: 50px, 50px;
+  }
+
+  @media screen and (min-width: 1000px) {
+     width: 330px;
+    position: absolute;
+    right: 0;
+    margin-top: 100px;
+  }
+
+  @media screen and (min-width: 1200px) {
+     width: 350px;
+    position: absolute;
+    right: 0;
+    margin-top: 50px;
+  }
+}
 
 
 
@@ -453,7 +487,7 @@ img.leave-left {
   border-radius: 0px 0px 20px 20px;
   gap: 3em;
   margin-top: -15em;
-  z-index: 0;
+  z-index: 2;
 
   @media screen and (min-width: 740px) {
     flex-direction: row;
@@ -484,6 +518,7 @@ img.leave-left {
 .header-waarom {
   display: flex;
   flex-direction: column;
+  z-index: 1;
 
   @media screen and (min-width: 740px) {
     width: 50%;
@@ -494,7 +529,7 @@ a.btn-waarom {
   align-self: baseline;
   background-color: var(--orange-button);
   color: var(--white-main);
-  padding: 0.8em 1.5em;
+     padding: 0.6em 1.3em;
   border-radius: 100px;
   text-decoration: none;
   display: flex;
@@ -503,6 +538,7 @@ a.btn-waarom {
   margin-top: 1.5em;
   transition: ease-in-out .2s;
   font-weight: 600;
+  font-size: 16px;
 }
 
 a.btn-waarom:hover {
@@ -515,6 +551,7 @@ a.btn-waarom:hover {
   background-color: var(--beige-background);
   padding: 2em;
   border-radius: 20px;
+  z-index: 1;
 
   @media screen and (min-width: 740px) {
     width: 50%;
@@ -570,9 +607,64 @@ a.btn-waarom:hover {
 }
 
 
+/* leave left */
+.waarom img.leave-left {
+  position: absolute;
+  right: 0;
+  width: 250px;
+  margin-top: -170px;
+  margin-left: 50px;
+  z-index: 0;
 
+  @media screen and (min-width: 740px) {
+    width: 300px;
+    margin-left: 20px;
+    margin-top: -150px;
+  }
 
+  @media screen and (min-width: 1000px) {
+    width: 400px;
+    margin-left: 0px;
+    margin-top: -250px;
+  }
 
+  @media screen and (min-width: 1200px) {
+    width: 430px;
+    margin-left: 30px;
+    margin-top: -320px;
+  }
+}
+
+/* leave right */
+.waarom img.leave-right {
+  position: absolute;
+  right: 0;
+  display: none;
+  margin-top: 100px;
+  margin-left: 50px;
+  z-index: 0;
+
+  @media screen and (min-width: 740px) {
+    display: block;
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 200px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    display: block;
+    width: 350px;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    width: 380px;
+    margin-left: 20px;
+    margin-top: -50px;
+  }
+}
 
 
 
@@ -605,16 +697,18 @@ a.btn-waarom:hover {
 
 .aanmelden p.sup-titel {
   align-self: center;
+  z-index: 2;
 }
 
 .aanmelden h2 {
   align-self: center;
   text-align: center;
   padding: 0em 0em 0.5em 0em;
+  z-index: 2;
 
   @media screen and (min-width: 740px) {
     padding: 0.7em 0em 0.8em 0em;
-    width: 80%;
+    width: 70%;
   }
 
   @media screen and (min-width: 1200px) {
@@ -668,7 +762,7 @@ input#form-button {
   width: fit-content;
   background-color: var(--orange-button);
   color: var(--white-main);
-  padding: 0.8em 3.5em 0.8em 3em;
+  padding: 0.6em 3.0em 0.6em 1.3em;
   border-radius: 100px;
   text-decoration: none;
   transition: ease-in-out .2s;
@@ -678,11 +772,12 @@ input#form-button {
   background-repeat: no-repeat;
   align-items: center;
   background-position: 84%, 0;
+  font-size: 16px;
 }
 
-input#form-button:hover{
+input#form-button:hover {
   background-color: var(--brown-text);
-  cursor:pointer;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1000px) {
@@ -706,6 +801,7 @@ input#form-button:hover{
   background-color: var(--green-background);
   padding: 0.5em;
   border-radius: 15px;
+   z-index: 1;
 
   @media screen and (min-width: 1000px) {
     width: 35%;
@@ -756,6 +852,73 @@ img.info-img {
   gap: 10px;
   display: flex;
 }
+
+/* leave top left */
+img.leave-top-left {
+  position: relative;
+  left: 0;
+  width: 300px;
+  z-index: 0;
+  margin-top: -220px;
+  margin-bottom: -150px;
+
+  @media screen and (min-width: 740px) {
+    width: 300px;
+    margin-top: -220px;
+    margin-bottom: -120px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    width: 350px;
+    margin-top: -220px;
+    margin-bottom: -200px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 400px;
+    margin-top: -260px;
+    margin-bottom: -170px;
+    translate: 0px 0px;
+  }
+}
+
+/* leave right */
+img.leave-top-right {
+  position: absolute;
+  right: 0;
+  display: none;
+  margin-left: 50px;
+  z-index: 0;
+
+  @media screen and (min-width: 740px) {
+    display: block;
+    width: 250px;
+    margin-top: -620px;
+    translate: 0px 0px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    width: 320px;
+    margin-top: -640px;
+    translate: 0px 0px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+    margin-top: -450px;
+    translate: 0px 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -833,8 +996,6 @@ footer figure {
 .samenwerken a:hover {
   color: var(--orange-button);
 }
-
-
 
 
 
