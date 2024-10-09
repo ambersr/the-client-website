@@ -31,7 +31,14 @@ Linkje naar de ontwikkelde pagina: [www.ambersr.github.io/the-client-website/](h
 <img width="76" alt="image" src="https://github.com/user-attachments/assets/a5dd67dc-45b6-4cc6-86bd-72c84a905bc0">
 
 ### Belangrijke features:
+- Accordion met belangrijke vragen over de Geveltuin. Leuke toevoeging voor op de pagina. Op deze manier kan de bezoeker op een speelse manier extra informatie krijgen.
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/3680cd24-1f2a-495c-aac2-b57afeb9cb50">
 
+- Aanmeldformulier waarop de bezoeker zich kan aanmelden voor de Geveltuin projecten.
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/0d5d3251-3dee-4209-ab74-8db31476b869">
+
+- Het te voorschijn komen van de Harry de mascotte wanneer je scrollt.
+<img width="200" alt="image" src="https://github.com/user-attachments/assets/6bd29728-3aff-4704-badc-332bce03675a">
 
 ## Kenmerken
 ### HTML structuur
