@@ -51,6 +51,5 @@ Wat belangrijk is om te weten is dat de code mobile first geschreven is. De medi
 De Javascript wordt gebruikt om de animaties op de pagina toe te voegen. Het gaat dan voornamelijk om de volgende elementen: Hamburger menu, het verbergen van het menu wanneer je scrollt en accordion met vragen m.b.t de Geveltuin
 
 ## Bronnen
-- Huisstijl (kleuren en fonts) 
-- Figma bestand (design Geveltuin pagina)
-- 
+- Huisstijl (kleuren en fonts uit de website gehaald) Linkje: https://bieb-in-bloei.vercel.app/
+- Figma bestand (design Geveltuin pagina) Linkje: https://www.figma.com/design/DXJVOUapnTVZWHXkFpcr0I/FDND-projecten?node-id=62-2304&t=5PNDDUMVCjG4DIYr-1
